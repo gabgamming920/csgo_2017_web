@@ -1,0 +1,363 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0 0 60px 0;
+    position: relative;
+    background-color: #333;
+}
+
+/* Intro styles */
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.click-message {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: black;
+}
+
+.skip-message {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.2em;
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('image/background-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.header-icon {
+    width: 327px;
+    height: auto;
+}
+
+.header-title {
+	width: 597px;
+	height: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    white-space: nowrap;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.game-archive {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    text-align: left;
+}
+
+.game-archive h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.release-version {
+    padding: 15px;
+    border-top: 1px solid #444;
+}
+
+.release-version:first-of-type {
+    border-top: none;
+}
+
+.release-version h4 {
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+}
+
+.release-date {
+    font-size: 0.8em;
+    color: #ccc;
+    font-style: italic;
+}
+
+.release-version ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.release-version li {
+    margin-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.download-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #5a5a5a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #777;
+}
+
+.works-in {
+    display: flex;
+    align-items: center;
+}
+
+.works-in span {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.works-in img {
+    width: 246px;
+    height: 78px;
+    margin-left: 4px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+#openModalBtn, #openModalBtn2 {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#openModalBtn:hover, #openModalBtn2:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.youtube-link {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+
+.youtube-icon {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.page-nav-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5a5a5a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 1px solid #888;
+}
+
+.page-nav-btn:hover {
+    background-color: #777;
+}
+
+.page-nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.donation-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.donation-options li {
+    text-align: center;
+}
+
+.donation-options img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #777;
+    border-radius: 5px;
+}
+
+.donation-options {
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-icon {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2em;
+        white-space: normal;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .game-archive h3 {
+        font-size: 1.4em;
+    }
+
+    .release-version h4 {
+        font-size: 1.2em;
+    }
+
+    .download-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .works-in img {
+        width: 180px;
+        height: auto;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}

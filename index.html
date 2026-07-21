@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabrix - Mod Releases</title>
+    <link rel="icon" type="image/ico" href="image/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="downloadMusic">
+        <source src="audio/DownloadComplete.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="backgroundMusic">
+        <source src="audio/Main Menu For Web.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Intro elements -->
+    <div id="introOverlay" class="intro-overlay">
+        <div class="click-message">Click to Start</div>
+    </div>
+    <div id="videoContainer" class="video-container" style="display: none;">
+        <video id="introVideo" width="100%" height="100%">
+            <source src="video/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="skipMessage" class="skip-message" style="display: none;">Press ESC to skip</div>
+    </div>
+
+    <div class="background-blur"></div>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <img src="image/left-icon.png" alt="Game Logo" class="header-icon">
+                <img src="image/operation-hydra.webp" alt="Game Logo" class="header-icon">
+            </div>
+            <p>Counter-Strike Global Offensive - Operation Hydra.</p>
+        </header>
+        <main>
+            <section>
+                <h2>About The Game</h2>
+                <button id="openModalBtn">Learn More</button>
+                <div id="aboutModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+                        <h2>The Game</h2>
+                        <p>This is the time when i think CSGO peaked at it's fullest</p>
+                        <p>You can download the .rar file, both Dedicated (NO BASE FILES) and the actual game below!</p>
+						<p>Don't worry, these files are pulled from steam's depot using the depotdownloader so ABSOLUTE NO VIRUS ARE IN THE .rar and executables.</p>
+						<p> If your paranoid check each individual file in windows defender or virustotal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="margin-top: 40px; border-color: #555;">
+
+            <section>
+                <h2>⬇⬇</h2>
+                <p>Browse through all popular releases of our projects.</p>
+
+                <div class="game-archive">
+                    <h3>CSGO17 (CSGO2017)</h3>
+
+                    <div class="release-version">
+					<p>Storage Minimum: 4gb compressed - 14-15gb uncompressed.</p>
+					<p>RAM Minimum: 2-4gb DDR3-5.</p>
+					<p>CPU Minimum: anything that can run CS:Source on High or Medium.
+					<p>GPU Minimum: anything that can run CS:Source with 50 or 64 bots.</p>
+                        <div class="download-section">
+                            <a href="https://drive.google.com/file/d/1LGtZTYEUX0JXkZTwVjASxmX_Xx46BGtW/view?usp=sharing" target="_blank" onclick="playdownloadAudio()" class="download-link">CSGO2017.rar</a>
+                            <div class="works-in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="game-archive">
+					<h3>CSGO17 (CSGO17 Dedicated Files)</h3>
+					
+					<div class="release-version">
+						<p>Takes atleast 400-500mb worth of storage.</p>
+						<p>Ram: 10p - 2-3gb.</p>
+						<p>Ram: 20p - 4-5gb.</p>
+						<p>Ram: 64p - 8-10gb.</p>
+						<div class="download-section">
+							<a href="https://github.com/gabgamming920/Releases-Mods/releases/download/version-new/InfantryMod.Final.Build.3.1.7z" target="_blank" onclick="playdownloadAudio()"  class="download-link">CSGO17_Dedicated_Files.rar</a>
+						<div class="works-in">
+						</div>
+					</div>
+				</div>
+			</div>
+				
+            </section>
+
+
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Gabrix Sole Developer. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
