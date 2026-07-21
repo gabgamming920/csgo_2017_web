@@ -13,6 +13,7 @@ function startIntroSequence() {
     introOverlay.style.display = 'none';
     videoContainer.style.display = 'block';
     introVideo.play();
+    audio.volume = 0.37
     
     // Show skip message after 1.5 seconds
     setTimeout(() => {
@@ -77,15 +78,15 @@ window.onclick = function(event) {
 // Plays the shitty nostalgic cs nexon, v6, v7, online, background audio function
 function playAudio() {
     var audio = document.getElementById('backgroundMusic');
-    audio.volume = 0.47;  // Set the fucking volume to 47%
-    audio.loop = true;    // Enable the fucking looping
+    audio.volume = 0.37;  // Set the fucking volume to 47%
+    audio.loop = false;    // Enable the fucking looping
     audio.play();
 }
 
 // Plays the fucking download audio function
 function playdownloadAudio() {
     var audio = document.getElementById('downloadMusic');
-    audio.volume = 0.47;  // Set volume to 47%
+    audio.volume = 0.37;  // Set volume to 47%
     audio.play();
 }
 
