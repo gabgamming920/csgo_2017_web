@@ -90,6 +90,13 @@ function playdownloadAudio() {
     audio.play();
 }
 
+// Plays the fucking download audio function 2
+function playdownloadAudio2() {
+    var audio = document.getElementById('downloadMusic');
+    audio.volume = 0.37;  // Set volume to 47%
+    audio.play();
+}
+
 
 // JavaScript for the snowy effect
 const canvas = document.getElementById('snowfall');
