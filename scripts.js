@@ -92,7 +92,7 @@ function playdownloadAudio() {
 
 // Plays the fucking download audio function 2
 function playdownloadAudio2() {
-    var audio = document.getElementById('downloadMusic');
+    var audio = document.getElementById('downloadMusic3');
     audio.volume = 0.37;  // Set volume to 47%
     audio.play();
 }
